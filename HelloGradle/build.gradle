@@ -1,0 +1,26 @@
+// Apply Java plugin
+apply plugin: 'java'
+
+// Apply Application plugin
+apply plugin: 'application'
+
+// Maven Central repository
+repositories {
+    mavenCentral()
+}
+
+// Project dependencies
+dependencies {
+    compile 'com.google.guava:guava:23.0'
+    testCompile 'junit:junit:4.12'
+}
+
+// Main Java class
+mainClassName = 'App'
+
+// Custom Gradle task
+task hello {
+    doLast {
+        println 'Hello, Gradle!'
+    }
+}
